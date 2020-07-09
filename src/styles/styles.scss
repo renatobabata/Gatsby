@@ -1,0 +1,12 @@
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary":    blue,
+    "secondary":  gray,
+    "gatsby":     purple,
+  ),
+  $theme-colors
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
