@@ -1,9 +1,29 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import SEO from "../components/seo"
 
 const Gallery = () => {
+    const { gallery } = useStaticQuery(graphql`
+        query {
+            gallery: allFile(filter: {extension: {eq: "jpg"}, absolutePath: {regex: "/images/"}}) {
+            nodes {
+                id
+                childImageSharp {
+                fluid(maxHeight: 500, maxWidth: 500) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+                }
+            }
+            }
+        }
+        `)
     return(
         <Layout>
+            <SEO 
+                title="Gallery" 
+            />
             <div className="container py-5">
                 <div className="row">
                     <div className="col-12">
@@ -11,7 +31,11 @@ const Gallery = () => {
                     </div>
                 </div>
                 <div className="row">
-                    Gallery
+                    {gallery.nodes.map(image => (
+                        <div className="col-lg-3 col-md-4 col-sm-6 mb-3">
+                        <Img key={image.id} fluid={image.childImageSharp.fluid} alt="Gallery" />
+                        </div>
+                    ))}
                 </div>
             </div>
         </Layout>
