@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Menu from "../Menu"
 import GlobalStyles from "../../styles/globalStyled"
+import Footer from "../Footer"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         <GlobalStyles/>
         <Menu/>
         <main>{children}</main>
+        <Footer/>
     </>
   )
 }
