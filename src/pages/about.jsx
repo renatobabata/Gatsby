@@ -19,6 +19,7 @@ const About = () => {
                 <div className="row">
                     <div className="col-4">
                         <CardV2
+                            nameImage="foto01"
                             titleCard="Card Title 1"
                             textCard="ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890"
                             colorButton="primary"
@@ -28,6 +29,7 @@ const About = () => {
                     </div>
                     <div className="col-4">
                         <CardV2
+                            nameImage="foto02"
                             titleCard="Card Title 2"
                             textCard="ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890"
                             colorButton="secondary"
@@ -37,6 +39,7 @@ const About = () => {
                     </div>
                     <div className="col-4">
                         <CardV2
+                            nameImage="foto03"
                             titleCard="Card Title 3"
                             textCard="ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890"
                             colorButton="gatsby"
