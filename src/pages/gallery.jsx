@@ -24,10 +24,10 @@ const Gallery = () => {
             <SEO 
                 title="Gallery" 
             />
-            <div className="container py-5">
+            <div className="container py-4">
                 <div className="row">
                     <div className="col-12">
-                        <h1 className="text-gatsby mb-4">Gallery</h1>
+                        <h1 className="mb-4">Gallery</h1>
                     </div>
                 </div>
                 <div className="row">
